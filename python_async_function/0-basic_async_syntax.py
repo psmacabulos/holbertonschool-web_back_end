@@ -2,13 +2,15 @@
 """Task 0: Basic async syntax"""
 
 import asyncio
-from typing import List
+import random
 
 
-async def placeholder() -> None:
-    """Placeholder function for 0-basic_async_syntax.py."""
-    pass
+async def wait_random(max_delay: int ``= 10) -> float:
+    """Method to have random delay between 0 - 10 s"""
+    delay = random.uniform(0, max_delay)
+    asyncio.sleep(delay)
+    return delay
 
 
 if __name__ == "__main__":
-    asyncio.run(placeholder())
+    asyncio.run(wait_random())
