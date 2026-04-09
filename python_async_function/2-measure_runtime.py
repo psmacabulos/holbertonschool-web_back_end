@@ -2,13 +2,13 @@
 """Task 2: Measure execution time of async functions"""
 
 import asyncio
+import time
 from typing import List
+wait_n = __import__('1-concurrent_coroutines').wait_n
 
 
-async def placeholder() -> None:
-    """Placeholder function for 2-measure_runtime.py."""
-    pass
-
-
-if __name__ == "__main__":
-    asyncio.run(placeholder())
+def measure_time(n: int, max_delay: int) -> float:
+    start = time.time()
+    asyncio.run(wait_n(n, max_delay))
+    stop = time.time()
+    return (stop - start) / n
