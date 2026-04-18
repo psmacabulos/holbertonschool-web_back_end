@@ -1,11 +1,22 @@
 #!/usr/bin/env python3
-\"\"\"101-students module\"\"\"
+"""Use aggregate functions of pymongo"""
 
 
-def main():
-    \"\"\"Main function for 101-students\"\"\"
-    pass
+def top_students(mongo_collection):
+    """Return all students sorted by average score"""
+    # get all the students
+    students = list(mongo_collection.find())
+    newStudents = []
+    for student in students:
+        topics = student['topics']
+        score = 0
+        for topic in topics:
+            score += topic['score']
 
+        averageScore = score / len(topics)
+        student["averageScore"] = averageScore
+        newStudents.append(student)
 
-if __name__ == "__main__":
-    main()
+    return sorted(
+        newStudents, key=lambda student: student['averageScore'],
+        reverse=True)
