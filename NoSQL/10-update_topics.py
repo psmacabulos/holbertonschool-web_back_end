@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""// 10-update_topics"""
+"""Module for updating topics in MongoDB"""
 
 
 def update_topics(mongo_collection, name, topics):
-    """Update topics of a school document"""
-    mongo_collection.update_one(
+    """Update all topics of school documents based on name"""
+    mongo_collection.update_many(
         {"name": name},
         {"$set": {"topics": topics}}
     )
