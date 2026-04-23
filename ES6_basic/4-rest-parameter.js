@@ -1,5 +1,3 @@
-#!/usr/bin/node
-
-export default function placeholder() {
-  return null;
+export default function returnHowManyArguments(...args) {
+  return args.length;
 }
