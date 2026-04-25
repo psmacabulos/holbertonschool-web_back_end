@@ -1,5 +1,7 @@
-#!/usr/bin/node
+export default function createEmployeesObject(departmentName, employees) {
+  const employeesObject = {
+    [departmentName]: employees,
+  };
 
-export default function placeholder() {
-  return null;
+  return employeesObject;
 }
