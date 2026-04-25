@@ -1,5 +1,6 @@
-#!/usr/bin/node
-
-export default function placeholder() {
-  return null;
+export default function getBudgetObject(income, gdp, capita) {
+  const budget = {
+    income, gdp, capita,
+  };
+  return budget;
 }
