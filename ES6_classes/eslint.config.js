@@ -1,10 +1,10 @@
-const { FlatCompat } = require('@eslint/eslintrc');
+import { FlatCompat } from '@eslint/eslintrc';
 
 const compat = new FlatCompat({
-  baseDirectory: __dirname,
+  baseDirectory: import.meta.dirname,
 });
 
-module.exports = [
+export default [
   {
     ignores: ['babel.config.js', '.eslintrc.js', 'eslint.config.js'],
   },

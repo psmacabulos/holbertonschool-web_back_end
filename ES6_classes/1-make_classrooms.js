@@ -1,10 +1,11 @@
-#!/usr/bin/env node
+import ClassRoom from './0-classroom';
 
-/**
- * 1-make_classrooms.js
- * Description: TODO - Implement feature
- */
+export default function initializeRooms() {
+  const sizes = [19, 20, 34];
+  const classRoomObjects = [];
 
-export default function placeholder() {
-  // TODO: Implement
+  for (const size of sizes) {
+    classRoomObjects.push(new ClassRoom(size));
+  }
+  return classRoomObjects;
 }
