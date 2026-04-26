@@ -23,6 +23,7 @@ export default [
       'no-console': 'off',
       'no-shadow': 'off',
       'no-restricted-syntax': ['error', 'LabeledStatement', 'WithStatement'],
+      "no-underscore-dangle": ["error", { "allowAfterThis": true }],
       'jest/no-error-equal': 'off',
       'jest/no-unnecessary-assertion': 'off',
       'jest/valid-expect-with-promise': 'off',
