@@ -1,10 +1,23 @@
-#!/usr/bin/env node
+import Building from './5-building.js';
 
-/**
- * 6-sky_high.js
- * Description: TODO - Implement feature
- */
+export default class SkyHighBuilding extends Building {
+  constructor(sqft, floors) {
+    super(sqft);
+    this.floors = floors;
+  }
 
-export default function placeholder() {
-  // TODO: Implement
+  get floors() {
+    return this._floors;
+  }
+
+  set floors(value) {
+    if (typeof value !== 'number') {
+      throw new TypeError('floors must be a number');
+    }
+    this._floors = value;
+  }
+
+  evacuationWarningMessage() {
+    return `Evacuate slowly the ${this.floors} floors`;
+  }
 }
