@@ -1,10 +1,18 @@
-#!/usr/bin/env node
+export default class HolbertonClass {
+  constructor(size, location) {
+    this._size = size;
+    this._location = location;
+  }
 
-/**
- * 8-hbtn_class.js
- * Description: TODO - Implement feature
- */
+  [Symbol.toPrimitive](hint) {
+    if (hint === 'number') {
+      return this._size;
+    }
 
-export default function placeholder() {
-  // TODO: Implement
+    if (hint === 'string') {
+      return this._location;
+    }
+
+    return this._size; // default fallback
+  }
 }
