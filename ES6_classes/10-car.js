@@ -1,10 +1,16 @@
-#!/usr/bin/env node
+export default class Car {
+  constructor(brand, motor, color) {
+    this._brand = brand;
+    this._motor = motor;
+    this._color = color;
+  }
 
-/**
- * 10-car.js
- * Description: TODO - Implement feature
- */
+  cloneCar() {
+    const Species = this.constructor[Symbol.species];
+    return new Species();
+  }
 
-export default function placeholder() {
-  // TODO: Implement
+  static get [Symbol.species]() {
+    return this;
+  }
 }
