@@ -1,10 +1,21 @@
-#!/usr/bin/env node
+export default class Building {
+  constructor(sqft) {
+    this.sqft = sqft;
 
-/**
- * 5-building.js
- * Description: TODO - Implement feature
- */
+    if (new.target !== Building
+      && typeof this.evacuationWarningMessage !== 'function') {
+      throw new Error('Class extending Building must override evacuationWarningMessage');
+    }
+  }
 
-export default function placeholder() {
-  // TODO: Implement
+  set sqft(value) {
+    if (typeof value !== 'number') {
+      throw new TypeError('sqft must be a number');
+    }
+    this._sqft = value;
+  }
+
+  get sqft() {
+    return this._sqft;
+  }
 }
