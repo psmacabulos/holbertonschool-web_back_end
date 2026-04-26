@@ -1,10 +1,16 @@
-#!/usr/bin/env node
+export default class Airport {
+  constructor(name, code) {
+    this._name = name;
+    this._code = code;
+  }
 
-/**
- * 7-airport.js
- * Description: TODO - Implement feature
- */
+  // Controls console.log representation
+  get [Symbol.toStringTag]() {
+    return this._code;
+  }
 
-export default function placeholder() {
-  // TODO: Implement
+  // Controls explicit string conversion
+  toString() {
+    return `[object ${this._code}]`;
+  }
 }
