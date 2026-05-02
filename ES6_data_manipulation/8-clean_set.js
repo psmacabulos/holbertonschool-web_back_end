@@ -9,7 +9,7 @@
  */
 
 const cleanSet = (st, startString) => {
-    if (startString === '') return ''
+    if (typeof startString !== 'string' || startString === '') return ''
     let clean = []
     for (const item of st) {
         if (item.startsWith(startString)) {
