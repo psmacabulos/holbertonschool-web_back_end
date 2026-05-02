@@ -1,9 +1,14 @@
 #!/usr/bin/env node
 /**
- * File: 2-get_students_by_loc.js
- * Description:
+ * Returns an array of objects who are located in a specific city
+ *
+ * @params {Array:object} students - An array of student objects
+ * @params {String} city - The city to filter students by
+ *
+ * @returns {Array:object} An array of student objects who are located in the specified city
+ *
  */
 
-export default function 2-get_students_by_loc() {
-
+export default function getStudentsByLocation(students, str) {
+  return students.filter((student) => student.location == str);
 }
