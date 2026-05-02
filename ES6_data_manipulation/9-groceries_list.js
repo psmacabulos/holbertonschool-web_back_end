@@ -1,9 +1,16 @@
 #!/usr/bin/env node
 /**
- * File: 9-groceries_list.js
- * Description:
+ * Creates a Map of groceries list
+ * 
+ * @returns {Map} - Map {'Apples => 10, 'Tomatoes => 10}
  */
 
-export default function 9-groceries_list() {
-
+export default function groceriesList() {
+    const groceries = new Map()
+    groceries.set('Apples', 10)
+    groceries.set('Tomatoes', 10)
+    groceries.set('Pasta', 1)
+    groceries.set('Rice', 1)
+    groceries.set('Banana', 5)
+    return groceries
 }
