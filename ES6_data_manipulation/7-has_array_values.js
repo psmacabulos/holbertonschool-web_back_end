@@ -14,5 +14,4 @@ const hasValuesFromArray = (s, arr) => {
     return true
 }
 
-
 export default hasValuesFromArray
