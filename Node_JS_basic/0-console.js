@@ -1,5 +1,5 @@
 const displayMessage = (str) => {
-  console.log(str);
+  process.stdout.write(`${str}\n`);
 };
 
 export default displayMessage;
