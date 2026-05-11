@@ -1,0 +1,13 @@
+{
+  "name": "holberton-node-js",
+  "version": "1.0.0",
+  "description": "Holberton Node.js Getting Started",
+  "main": "0-console.js",
+  "scripts": {
+    "start": "node 0-console.js",
+    "dev": "nodemon 0-console.js",
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC"
+}
