@@ -1,5 +1,3 @@
-const displayMessage = (str) => {
-  process.stdout.write(`${str}\n`);
-};
-
-export default displayMessage;
+export default function displayMessage(str) {
+  console.log(str);
+}
