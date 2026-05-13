@@ -3,7 +3,8 @@ const fs = require('fs');
 const countStudents = (path) => new Promise((resolve, reject) => {
   fs.readFile(path, 'utf8', (err, data) => {
     if (err) {
-      return reject(new Error('Cannot load the database'));
+      reject(new Error('Cannot load the database'));
+      return;
     }
     const lines = data.split('\n').filter((line) => line.trim() !== '');
     const students = lines.slice(1);
