@@ -48,4 +48,9 @@ app.get('/students', (req, res) => {
     .then((result) => res.end(`${heading}\n${result}`))
     .catch((err) => res.end(`${heading}\n${err.message}`));
 });
+
+app.use((req, res) => {
+  res.status(200).send(greeting);
+});
+
 app.listen(PORT);
