@@ -1,6 +1,6 @@
 import fs from 'fs';
 
-//function to read the database
+// Read and group students from the CSV database.
 const readDatabase = (path) =>
   new Promise((resolve, reject) => {
     fs.readFile(path, 'utf8', (err, data) => {
@@ -26,7 +26,5 @@ const readDatabase = (path) =>
       resolve(subjects);
     });
   });
-
-console.log(readDatabase('../database.csv'));
 
 export default readDatabase;
