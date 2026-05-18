@@ -54,3 +54,5 @@ app.use((req, res) => {
 });
 
 app.listen(PORT);
+
+module.exports = app;
